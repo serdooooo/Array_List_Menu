@@ -65,11 +65,16 @@ namespace kurs_22112021_39_Example
                         break;
                     case 4:
                         Console.WriteLine("Düzenlemek istediğiniz değeri giriniz");
-                        int duzenle = Convert.ToInt32(Console.ReadLine());
+                        string duzenle = Console.ReadLine();
                         Console.WriteLine("düzenleyeceğiniz değer:");
                         string yeniduzen =Console.ReadLine();
 
-                        duzenle = degerlerListesi.IndexOf(yeniduzen);
+                        if (degerlerListesi.Contains(duzenle))
+                        {
+                            int indeks = degerlerListesi.IndexOf(duzenle);
+                            degerlerListesi[indeks] = yeniduzen;
+                            Console.WriteLine("Değeriniz güncellendi");
+                        }
                         
 
                         Console.WriteLine("değer duzenlendi: "+yeniduzen);
