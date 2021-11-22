@@ -94,6 +94,9 @@ namespace kurs_22112021_39_Example
                         Console.Clear();
                         Console.WriteLine("Uygulamadan çıkılıyor...");
                         Thread.Sleep(3000);
+                        Console.Clear();
+                        Console.WriteLine("Yine beklerizzzzz");
+                        Thread.Sleep(3000);
                         Environment.Exit(0);
                         break;
                     default:
